@@ -1,38 +1,255 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fcf5e5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.site-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding: 0.8rem 0;
+  background: #fff;
+}
+
+
+.profile-header {
+  display: flex;
+  max-width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background: #fcf5e5;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #212121;
+}
+
+.avatar-section {
+  display: flex;
+  gap: 20px;
+}
+
+.avatar {
+  width: 190px;
+  height: 190px;
+  border-radius: 5px;
+}
+
+.avatar-description {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.avatar-children .avatar-name {
+  font-size: 32px;
+  color: #212121;
+}
+
+.avatar-field {
+  font-size: 24px;
+  color: #212121b2;
+}
+
+.edit-profile {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.small-pencil {
+  width: 18px;
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1046.cur'), auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.edit-btn {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 16px;
+  color: #212121;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1046.cur'), auto;
+}
+
+.edit-profile:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-large {
+  display: flex;
+  align-items: center;
+  align-self: self-end;
+  background-color: #212121;
+  gap: 8px;
+  border: none;
+  padding: 18px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button-large:hover {
+  opacity: 80%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-plus {
+  width: 12px;
+  height: 12px;
+}
+
+.btn-text {
+  font-size: 16px;
+  color: #fcf5e5;
+}
+
+.site-content {
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 20px 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+}
+/* .Image-container {
+  width: calc(33.333% - 10px);
+  margin-bottom: 20px;
+} */
+
+.Images {
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.Images:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.Name-heart, .desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.Name-heart p, .desc p {
+  font-size: 17px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.heart-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 40%;
+}
+.heart-icon.liked {
+  opacity: 1;
+  width: 28px;
+  height: 28px;
+}
+.heart-icon:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.site-footer {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #212121;
+}
+
+.footertext {
+  font-size: 10px;
+  color: #666460;
+}
+
+@media (max-width: 500px) {
+  .profile-header {
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .avatar-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar-name {
+    font-size: 24px;
+    align-items: center;
+  }
+
+  .avatar-field {
+    font-size: 14px;
+    align-self: center;
+    padding-left: 90px;
+    margin-top: 0%;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .avatar-description {
+    margin-bottom: 1rem;
+    gap: 32px;
+  }
+
+  .edit-profile {
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  .button-large {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .site-content {
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 20px 0;
+  }
+
+  .Image-container {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: auto;
+    padding-right: auto;
+    align-items: center;
+  }
+
+  .site-footer {
+    width: 90%;
   }
 }
