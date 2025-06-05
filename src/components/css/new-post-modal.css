@@ -13,12 +13,10 @@
   
   /* Modal content */
   .newPostModal-content {
-    background: #fff;
-    border-radius: 12px;
+    background: rgba(252, 245, 229, 1);
+    border-radius: 8px;
     padding: 2rem 2.5rem;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    min-width: 320px;
-    max-width: 95vw;
+    min-width: 500px;
     position: relative;
     animation: modalFadeIn 0.3s;
   }
@@ -31,64 +29,58 @@
   /* Close button */
   .closeNewPostModal {
     position: absolute;
-    top: 1rem;
-    right: 1.2rem;
-    font-size: 2rem;
-    color: #888;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
     cursor: pointer;
-    transition: color 0.2s;
-  }
-  .closeNewPostModal:hover {
-    color: #e74c3c;
   }
   
   /* Form styles */
   .newPostModal-content form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
   }
   
-  .newPostModal-content label {
-    font-weight: 500;
-    margin-bottom: 0.2rem;
+  .newPostModal-content form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
   }
 
+  .newPostModal-content input[type="text"] {
+    width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  }
   .newPostModal-content input[type="text"],
   .newPostModal-content input[type="file"] {
-    padding: 0.5rem;
-    border: 1px solid #bbb;
-    border-radius: 6px;
-    font-size: 1rem;
+    border-radius: 4px;
   }
 
   .newPostModal-content input[type="file"] {
-    padding: 0.3rem 0;
+    padding: 8px 0;
   }
 
   .newPostModal-content .save-button {
-    margin-top: 1rem;
-    padding: 0.7rem 1.5rem;
-    background: #2d72d9;
-    color: #fff;
+    margin-top: 10px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    color: #fcf5e5;
     border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 600;
+    border-radius: 5px;
     cursor: pointer;
     transition: background 0.2s;
-  }
-  .newPostModal-content .save-button:hover {
-    background: #1a4e96;
   }
   
   /* Image preview */
   .newPostModal-content img {
     display: block;
-    margin: 0.5rem auto;
+    margin: 10px auto;
     border-radius: 8px;
     max-width: 100px;
     max-height: 100px;
     object-fit: cover;
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
   }

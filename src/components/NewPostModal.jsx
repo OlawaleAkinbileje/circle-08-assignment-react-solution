@@ -53,22 +53,25 @@ const NewPostModal = ({ open, onClose, onAdd }) => {
         </span>
         <h2>Add New Image</h2>
         <form onSubmit={handleSubmit}>
-          <label>Name:</label>
+          <label htmlFor="imageName">Name:</label>
           <input
             type="text"
+            id="imageName"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
-          <label>Description:</label>
+          <label htmlFor="imageDescription">Description:</label>
           <input
             type="text"
+            id="imageDescription"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <label>Upload Image:</label>
+          <label htmlFor="imageUpload">Upload Image:</label>
           <input
             type="file"
+            id="imageUpload"
             ref={fileInputRef}
             onChange={handleImageChange}
             accept="image/*"

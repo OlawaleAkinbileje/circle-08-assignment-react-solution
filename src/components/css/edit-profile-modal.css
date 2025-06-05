@@ -18,6 +18,12 @@
     border-radius: 8px;
     min-width: 500px;
     position: relative;
+    animation: modalFadeIn 0.3s;
+  }
+
+  @keyframes modalFadeIn {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
   
   .closeEditModal {
