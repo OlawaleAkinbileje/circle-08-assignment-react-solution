@@ -35,7 +35,7 @@ const EditProfileModal = ({ open, onClose, onSave, initialProfile }) => {
         if (file) {
             const reader = new FileReader();
             reader.onload = evt => setAvatar(evt.target.result);
-            reader.readAsDataUrl(file);
+            reader.readAsDataURL(file);
         }
     }
 
