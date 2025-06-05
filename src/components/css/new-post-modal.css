@@ -84,3 +84,10 @@
     object-fit: cover;
     border: 1px solid #ccc;
   }
+
+  @media (max-width: 500px) {
+    .newPostModal-content {
+      min-width: 90%;
+      padding: 1.5rem;
+    }
+  }
